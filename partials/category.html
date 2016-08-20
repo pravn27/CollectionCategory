@@ -1,0 +1,14 @@
+<div class="row container fluid">
+  <ol class="breadcrumb"> 
+    <li><a href="#"> Categories </a></li>
+    <li> {{ subCategory }} </li>
+  </ol>
+  <div> 
+    <div ng-repeat="i in array2">
+      <div class="col-md-4"> 
+        Name: <span>{{ i.name }}</span><br>
+        Sequence No: <span>{{ i.seq_no }}</span><br>
+      </div> 
+    </div> 
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="row container fluid">
+    <ol class="breadcrumb"> 
+      <li><a href="#"> Collections </a></li>
+      <li> {{ subCollection }}  </li>
+    </ol>
+
+      <h2>Select Location :
+      <select ng-model="search_location">
+        <option>Bangalore</option>
+        <option>Pune</option>
+        <option>Mumbai</option>
+        <option>Srinagar</option>
+        <option>Kolkata</option>
+        <option>New delhi</option>
+        <option>Goa</option>
+        <option>Noida</option>
+      </select> </h2>
+
+     From date : 
+     <input type="date" ng-model="from_date">  </input> 
+      End date : 
+     <input type="date" ng-model="end_date" ng-change='datefilter(from_date,end_date)'> </input> 
+      <br/> {{error}} <br/> 
+
+    <div class="container fluid">
+      <div ng-repeat="i in array1 | filter: search_location">
+        <div id="collection_display" class="row col-md-4"> 
+          <img class="img-rounded" ng-src="{{i.image}}"><br>
+          <div align="center">
+            <span style="color:black;font-style:italic;font-weight:900;font-size:20px;">{{i.name}}</span><br>
+            Start date:<span>{{i.start_date | myDate}}</span><br>
+            End date:<span>{{i.end_date | myDate }}</span><br>
+            Location:<span>{{i.city_name | uppercase}}</span><br>
+            No of Shows:<span>{{i.no_of_shows}}</span><br>
+            Supplier name:<span>{{i.supplier_name | uppercase}}</span><br> <br><br>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>

@@ -1,0 +1,25 @@
+span {
+	color: green;
+}
+
+img {
+	vertical-align: middle;
+	width: 300px;
+	height: 200px;
+}
+
+#collection_display{
+	min-height: 425px;
+	min-width: 392px;
+	padding-right: 60px;
+}
+
+select {
+	font-size: 18px;
+	width: 300px;
+	height: 30px;
+}
+
+h2{
+	font-size: 18px;
+}

@@ -1,0 +1,15 @@
+<div class="row container fluid">
+      <h2>Collections</h2>
+      <div ng-repeat="i in data.collections">
+        <div class="col-sm-3"> 
+          <a ng-href="#collection/{{i.id}}/{{i.name}}" class="btn btn-small btn-block btn-primary"> {{i.name}} </a> 
+        </div>
+      </div>
+      <br><br>
+      <h2>Categories</h2>
+      <div ng-repeat="i in data.categories">
+        <div class= "col-sm-3"> 
+          <a href="#category/{{i.id}}/{{i.name}}" class="btn btn-small btn-block btn-primary" ng-click="fun2(data.categories[$index])"> {{i.name}} </a>
+        </div>
+      </div>
+  </div>
